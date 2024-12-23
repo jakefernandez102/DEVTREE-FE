@@ -1,4 +1,3 @@
-import React from 'react'
 import {SocialNetworks} from '../types'
 import {useSortable} from '@dnd-kit/sortable'
 import {CSS} from '@dnd-kit/utilities'
