@@ -61,10 +61,15 @@ npm run dev
 ```
 /frontend
 ├── src
+│   ├── api
+│   ├── assets
 │   ├── components
-│   ├── pages
-│   ├── hooks
+│   ├── config
+│   ├── data
+│   └── layout
+│   └── types
 │   └── utils
+│   └── views
 ├── tailwind.config.js
 ├── vite.config.js
 ├── package.json
