@@ -14,7 +14,9 @@ export default function AppLayout() {
     })
 
     if(isLoading) return (
-      <Spinner/>
+      <div className='flex justify-center items-center min-h-screen'>
+        <Spinner/>
+      </div>
     )
 
     if(isError) return <Navigate to={'/auth/login'}/>

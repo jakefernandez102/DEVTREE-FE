@@ -2,13 +2,12 @@ import {CircleLoader} from 'react-spinners'
 
 interface SpinnerProps {
   color?: string
+  classes?: string
 }
 
-const Spinner = ({color = 'black'}: SpinnerProps) => {
+const Spinner = ({color = 'black', classes = ''}: SpinnerProps) => {
   return (
-    <div className='flex justify-center items-center min-h-screen'>
-      <CircleLoader size={100} color={color === 'white' ? '#ffffff' :'#0c4a6e'}/>
-    </div>
+      <CircleLoader className={classes} size={100} color={color === 'white' ? '#ffffff' :'#0c4a6e'}/>
   )
 }
 

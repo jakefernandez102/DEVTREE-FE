@@ -18,7 +18,11 @@ const HandleView = () => {
   console.log({isLoading})
   console.log({error})
   console.log({data})
-  if( isLoading ) return <Spinner color={'white'}/>
+  if( isLoading ) return (
+    <div className='flex justify-center items-center min-h-screen'>
+      <Spinner color={'white'}/>
+    </div>
+)
 
   if( error )return <Navigate to='/404' />
 

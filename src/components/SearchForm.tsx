@@ -27,7 +27,7 @@ const SearchForm = () => {
     console.log(slug)
     searchMutation.mutate(slug)
   }
-
+  const a =true
   return (
   <form
     onSubmit={handleSubmit(handleSearch)}
@@ -52,7 +52,10 @@ const SearchForm = () => {
     )}
 
     <div className="mt-10">
-      {searchMutation.isPending && <Spinner/>}
+      {a && 
+      <div className='w-full '>
+        <Spinner classes={'mx-auto'}/>
+      </div> }
       {searchMutation.error && <p className='text-center text-red-600 font-black'>{searchMutation.error.message}</p>}
       {searchMutation.data && <p className='text-center text-cyan-500 font-black'>
         {searchMutation.data} go to <Link to={'/auth/register'} state={{handle: slugify(handle)}}>Register</Link> </p>}
