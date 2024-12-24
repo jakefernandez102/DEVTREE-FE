@@ -80,7 +80,7 @@ const LoginView = () => {
           <input
               type="submit"
               className="bg-cyan-400 p-3 text-lg w-full uppercase text-slate-600 rounded-lg font-bold cursor-pointer"
-              value='Iniciar Sesión'
+              value='Login'
           />
       </form>
 
