@@ -52,7 +52,6 @@ export const getUserByHandle = async (handle: string) =>{
 export const searchByHandle = async (handle: string) =>{
   try {
       const {data} = await axiosClient.post<string>('/search',{handle})
-      console.log(data)
       return data
     } catch (error) {
       console.log(error)

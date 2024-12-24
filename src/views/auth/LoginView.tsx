@@ -19,7 +19,6 @@ const LoginView = () => {
 
   const handleLogin = async (formData:loginForm)=>{
     try {
-      console.log(formData)
       const {data} = await axiosClient.post('/auth/login', formData)
       localStorage.setItem('AUTH_TOKEN', data.token)
       toast.success(data.message)

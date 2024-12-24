@@ -14,10 +14,6 @@ const HandleView = () => {
     queryKey: ['handle',handle],
     retry: 1
   })
-
-  console.log({isLoading})
-  console.log({error})
-  console.log({data})
   if( isLoading ) return (
     <div className='flex justify-center items-center min-h-screen'>
       <Spinner color={'white'}/>

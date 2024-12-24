@@ -20,14 +20,11 @@ const SearchForm = () => {
     mutationFn: searchByHandle,
   })
 
-  console.log(searchMutation)
 
   const handleSearch = () =>{
     const slug = slugify(handle)
-    console.log(slug)
     searchMutation.mutate(slug)
   }
-  const a =true
   return (
   <form
     onSubmit={handleSubmit(handleSearch)}
@@ -52,7 +49,7 @@ const SearchForm = () => {
     )}
 
     <div className="mt-10">
-      {a && 
+      {searchMutation.isPending && 
       <div className='w-full '>
         <Spinner classes={'mx-auto'}/>
       </div> }
